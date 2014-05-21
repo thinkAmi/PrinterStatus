@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>インク残量</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+    
+  </head>
+  <body>
+    <div id="container">
+      <% @charts.each_with_index do |chart, i| %>
+        <div class="chart" >
+          <%= high_chart("graph" + i.to_s, chart) %>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
+
